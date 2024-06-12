@@ -1,10 +1,12 @@
 class_name MainMenu
 extends Control
 
+var sceneLoader = SceneLoaderClass.new()
+
 const NO_VERSION_NAME : String = "0.0.0"
 
 ## Defines the path to the game scene. Hides the play button if empty.
-@export_file("*.tscn") var game_scene_path : String
+@export_file("*.tscn") var game_scene_path : String = "res://Scenes/demo_scene.tscn"
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 @export_group("Version")
@@ -18,10 +20,10 @@ var credits_scene
 var sub_menu
 
 func load_scene(scene_path : String):
-	SceneLoader.load_scene(scene_path)
+	sceneLoader.load_scene(scene_path)
 
 func play_game():
-	SceneLoader.load_scene(game_scene_path)
+	get_tree().change_scene_to_file("res://Scenes/demo_scene.tscn")
 
 func _open_sub_menu(menu : Control):
 	sub_menu = menu

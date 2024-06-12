@@ -8,6 +8,8 @@ const LOADING_TEXT = "Loading..."
 const LOADING_TEXT_WAITING = "Still Loading..."
 const LOADING_TEXT_STILL_WAITING = "Still Loading... (%d seconds)"
 
+var SceneLoader = SceneLoaderClass.new()
+
 enum StallStage{STARTED, WAITING, STILL_WAITING, GIVE_UP}
 var _stall_stage : StallStage = StallStage.STARTED
 var _scene_loading_complete : bool = false

@@ -5,7 +5,7 @@ extends Node
 signal scene_loaded
 
 @export_file("*.tscn") var loading_screen_path : String : set = set_loading_screen
-var _loading_screen : PackedScene
+var _loading_screen : PackedScene = preload("res://addons/maaacks_menus_template/examples/scenes/LoadingScreen/LoadingScreen.tscn")
 var _scene_path : String
 var _loaded_resource : Resource
 var _background_loading : bool

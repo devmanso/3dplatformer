@@ -9,7 +9,7 @@ extends Node3D
 # ---------- VARIABLES ---------- #
 
 # Control Mouse Sensitivity through inspector or from here
-@export var mouse_sensitivity := 0.2
+var mouse_sensitivity := float(Config.get_config("InputSettings", "MouseSensitivity"))
 
 # Assign Camera Node here it might be named different in your Project
 @onready var camera = $Camera3D
