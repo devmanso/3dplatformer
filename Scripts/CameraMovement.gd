@@ -8,8 +8,7 @@ extends Node3D
 
 # ---------- VARIABLES ---------- #
 
-# Control Mouse Sensitivity through inspector or from here
-var mouse_sensitivity := float(Config.get_config("InputSettings", "MouseSensitivity"))
+var mouse_sensitivity : float
 
 # Assign Camera Node here it might be named different in your Project
 @onready var camera = $Camera3D
@@ -17,6 +16,11 @@ var mouse_sensitivity := float(Config.get_config("InputSettings", "MouseSensitiv
 # ---------- FUNCTIONS ---------- #
 
 func _ready():
+	
+	if !(Config.get_config("InputSettings", "MouseSensitivity")):
+		mouse_sensitivity = 0.5  # Default value if setting or section does not exist
+	else :
+		mouse_sensitivity = float(Config.get_config("InputSettings", "MouseSensitivity")) * .5
 	top_level = true
 	# Confining Mouse Cursor in the game view so it doesnt get in the way of gameplay
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="3D Platformer Starter"
-config/description="A Starter 3D Plaformer Kit For Godot 4."
+config/name="CloudBound"
+config/description="3d platformer"
 config/tags=PackedStringArray("starterkit")
 run/main_scene="res://addons/maaacks_menus_template/examples/scenes/Menus/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
@@ -22,10 +22,6 @@ config/icon="res://Assets/Resources/3DPlatformerStarterIcon.svg"
 
 AudioManager="*res://Scenes/Audio/AudioManager.tscn"
 GameManager="*res://Scripts/GameManager.gd"
-
-[display]
-
-window/size/always_on_top=true
 
 [filesystem]
 
