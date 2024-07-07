@@ -143,6 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8983, 8.76539, -20.793)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8983, 9.70155, -9.79296)
 
 [node name="GameManager" type="Node3D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("6_8fvkd")
 
 [node name="DeadZone" type="Area3D" parent="."]
